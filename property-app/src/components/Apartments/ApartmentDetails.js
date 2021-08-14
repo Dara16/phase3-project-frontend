@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from "react-router-dom";
 import { BASE_URL } from '../../constraints/index.js';
 import Occupant from '../Occupants/Occupant.js';
+import OccupantForm from '../Occupants/OccupantForm.js';
 
 export default function ApartmentDetails() {
     const [apartment, setApartment] = useState(null);
@@ -13,6 +14,24 @@ export default function ApartmentDetails() {
             .then((res) => res.json())
             .then((json) => setApartment(json));
     }, [id]);
+
+
+    function createOccupant(occupantDetails) {
+        const newOccupant = {
+            ...occupantDetails,
+            apartment_id: id,
+        };
+
+        fetch(BASE_URL + "/occupants", {
+            method: "POST",
+            body: JSON.stringify(newOccupant),
+        })
+            .then((res) => res.json())
+            .then((json) => {
+                const newApartment = {...apartment, occupants: [...apartment.occupants, json]};
+                setApartment(newApartment);
+            })
+    }
 
 
     return (
@@ -27,6 +46,8 @@ export default function ApartmentDetails() {
                     {apartment.occupants.map((occupant) => (
                         <Occupant occupant={occupant} />
                     ))}
+                    <h3>Add New Occupant</h3>
+                    <OccupantForm createOccupant={createOccupant}/>
                 </>
             )}
              
