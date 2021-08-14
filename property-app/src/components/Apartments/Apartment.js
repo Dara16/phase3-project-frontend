@@ -1,11 +1,13 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 
 export default function Apartment({ apartment }) {
     return (
         <div className="card">
-            <p>Number: {apartment.number}</p>
-            <p>Style: {apartment.style}</p>
-            <p>Rent Amount: {apartment.rent}</p>
+            <Link to={`/apartments/${apartment.id}`}>
+                <p>Number {apartment.number}</p>
+            </Link>
+                <p>Style: {apartment.style}</p>
         </div>
     );
 }

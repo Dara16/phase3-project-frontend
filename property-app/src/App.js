@@ -3,7 +3,8 @@ import TenementsContainer from './components/Tenements/TenementsContainer';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import HomePage from "./components/HomePage.js";
 import NavBar from './components/NavBar';
-import TenementDetails from "./components/Tenements/TenementDetails";
+import TenementDetails from './components/Tenements/TenementDetails';
+import ApartmentDetails from './components/Apartments/ApartmentDetails.js';
 
 
 function App() {
@@ -21,6 +22,9 @@ function App() {
           </Route>
           <Route path="/tenements/:id">
             <TenementDetails />
+          </Route>
+          <Route path="/apartments/:id">
+            <ApartmentDetails />
           </Route>
           
         </Switch>
