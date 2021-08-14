@@ -5,6 +5,7 @@ import HomePage from "./components/HomePage.js";
 import NavBar from './components/NavBar';
 import TenementDetails from './components/Tenements/TenementDetails';
 import ApartmentDetails from './components/Apartments/ApartmentDetails.js';
+import './index.css'
 
 
 function App() {
@@ -12,7 +13,9 @@ function App() {
     <Router>
       <div className="App">
         <div className="app-background" />
-        <NavBar />
+        <div className="navbar">
+          <NavBar />
+        </div>
         <Switch>
           <Route exact path="/">
             <HomePage/>
