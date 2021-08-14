@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import Tenement from './Tenement.js'
+import { BASE_URL } from '../../constraints/index.js';
 
-const BASE_URL = "http://localhost:9393/"
+
 
 export default function TenementsContainer() {
     const [tenements, setTenements] = useState(null);
