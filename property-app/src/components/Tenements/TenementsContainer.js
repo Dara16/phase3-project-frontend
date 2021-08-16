@@ -20,7 +20,7 @@ export default function TenementsContainer() {
 
     return (
         <div>
-            <h1>PROPERTIES</h1>
+            <h2>PROPERTIES</h2>
             {tenements && populateTenements()}
         </div>
     )

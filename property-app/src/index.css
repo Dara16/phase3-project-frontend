@@ -10,7 +10,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgb(197, 81, 81);
+  background-color: rgb(67, 136, 109);
 }
 
 code {
@@ -22,11 +22,32 @@ h1 {
   text-align: center;
 }
 
-#navbar {
+h2 {
   text-align: center;
+}
+
+h3 {
+  text-align: center;
+}
+
+p {
+  text-align: center;
+}
+
+#navbar {
+  align-self: center;
 
 }
 
 link {
   align-self: center;
 }
+
+.occupant-form {
+  text-align: center;
+}
+
+.button {
+  text-align: center;
+}
+

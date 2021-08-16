@@ -13,11 +13,13 @@ export default function Occupant({ occupant }) {
 
     return (
         <>
-            <div className="card">
+            <div className="occupant-list">
                     <p>Name: {occupant.name}</p>
                     <p>End of Lease: {occupant.lease_end}</p>
-                    <button onClick={() => deleteOccupant(occupant)}>Delete Occupant</button>
-                    <button>Edit Occupant</button>
+                    <div className="button">
+                        <button onClick={() => deleteOccupant(occupant)}>Delete Occupant</button>
+                        <button>Edit Occupant</button>
+                    </div>
             </div>
 
         </>

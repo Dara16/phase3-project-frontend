@@ -38,7 +38,7 @@ export default function ApartmentDetails() {
         <div>
             {apartment && (
                 <>
-                    <h3>Apartments</h3>
+                    <h3>Apartment</h3>
                     <p>Apartment Number: {apartment.number}</p>
                     <p>Style: {apartment.style}</p>
                     <p>Rent Amount: {apartment.rent}</p>

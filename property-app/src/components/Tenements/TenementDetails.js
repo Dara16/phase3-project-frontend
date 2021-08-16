@@ -21,7 +21,7 @@ export default function TenementDetails() {
                 <>
                     <p>Building Name: {tenement.name}</p>
                     <p>Location: {tenement.address}</p>
-                    <h4>Apartments</h4>
+                    <h3>Apartments</h3>
                     {tenement.apartments.map((apartment) => (
                         <Apartment apartment={apartment} />
                     ))}

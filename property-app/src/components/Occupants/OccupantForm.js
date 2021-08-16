@@ -16,7 +16,7 @@ export default function OccupantForm({createOccupant}) {
 
 
     return (
-        <form>
+        <form className="occupant-form">
             <label>Name: </label>
             <input onChange={handleChange} name="name" value={formData.name}/>
             <label>End of Lease: </label>
